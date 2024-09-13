@@ -1,0 +1,13 @@
+on:
+  push:
+   branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@2
+      - name: Run s single line script
+        run: echo hello, world
+  
